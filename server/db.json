@@ -22,10 +22,17 @@
       "role": "user"
     },
     {
-      "id": "d675",
-      "name": "luis alverto",
-      "email": "nuevo@gmail.com",
+      "id": "4904",
+      "name": "Italo upc",
+      "email": "italonuevo@upc.edu.com",
       "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "ed90",
+      "name": "Aldair UPC",
+      "email": "aldairnuevo@upc.edu.pe",
+      "password": "12345",
       "role": "user"
     }
   ],

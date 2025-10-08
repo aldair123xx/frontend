@@ -1,20 +1,14 @@
 <template>
-    <div class="main-layout">
-        <Navbar></Navbar>
-        <main class="main-content">
-            <router-view />
-        </main>
-        <Footer></Footer>
-    </div>
-
+    <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 SmartStay. Todos los derechos reservados.</p>
+            </div>
+        </footer>
 </template>
-
 <script setup>
-import Navbar from './navbar.vue';
-import Footer from './footer.vue'; 
-
+import { useRouter } from 'vue-router';
+const router = useRouter();
 </script>
-
 
 <style scoped>
 .main-layout {

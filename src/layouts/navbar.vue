@@ -1,21 +1,41 @@
 <template>
-    <div class="main-layout">
-        <Navbar></Navbar>
-        <main class="main-content">
-            <router-view />
-        </main>
-        <Footer></Footer>
-    </div>
-
+    <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <router-link to="/" class="logo">
+                        <h1>SmartStayxdxd</h1>
+                    </router-link>
+                    <nav class="nav">
+                        <router-link to="/" class="nav-link">Cuartos</router-link>
+                        <template v-if="authStore.user">
+                            <router-link to="/my-bookings" class="nav-link">Mis Reservas</router-link>
+                            <router-link v-if="authStore.isAdmin()" to="/admin" class="nav-link admin-link">Admin</router-link>
+                            <button @click="handleSignOut" class="btn btn-outline"> Cerrar Session</button>
+                        </template>
+                        <template v-else>
+                            <router-link to="/login" class="btn btn-outline">Iniciar Sesión</router-link>
+                        </template>
+                    </nav>
+                </div>
+            </div>
+        </header>
 </template>
-
 <script setup>
-import Navbar from './navbar.vue';
-import Footer from './footer.vue'; 
+import { useRouter } from 'vue-router';
+import { useAuthStore } from '../stores/auth';
 
+const authStore = useAuthStore();
+const router = useRouter();
+
+const handleSignOut = async () => {
+    try {
+        await authStore.signOut();
+        router.push('/login');
+    } catch (error) {
+        console.error('Error signing out:', error);
+    }
+};
 </script>
-
-
 <style scoped>
 .main-layout {
   min-height: 100vh;
