@@ -1,13 +1,12 @@
 <script setup>
-import UserLogin from "./hotel/presentation/view/user-login.vue";
+import UserLogin from "./hotel/presentation/view/auth/user-login.vue";
+import UserRegister from "./hotel/presentation/view/auth/user-register.vue";
+import Home from "./shared/presentation/view/home.vue";
+import Navbar from "./shared/presentation/components/nabvar.vue";
 </script>
 
 <template>
-  <div>
-    <h1>cachudo de mrd</h1>
-
-  </div>
-  <user-login />
+  <Navbar />
 </template>
 
 

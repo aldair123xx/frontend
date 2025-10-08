@@ -1,8 +1,8 @@
-import { Room } from "../domain/model/room.entity.js";
+import { Booking } from "../domain/model/booking.entity.js";
 
-export class RoomAssembler {
+export class BookingAssembler {
     static toEntityFromResource(resource) {
-        return new Room({ ...resource });
+        return new Booking({ ...resource });
     }
 
     static toEntitiesFromResponse(response) {
@@ -10,7 +10,7 @@ export class RoomAssembler {
             console.error(`${response.status}: ${response.statusText}`);
             return [];
         }
-        let resources = Array.isArray(response.data) ? response.data : response.data['rooms'];
+        let resources = Array.isArray(response.data) ? response.data : response.data['bookings'];
         return resources.map(resource => this.toEntityFromResource(resource));
     }
 }
