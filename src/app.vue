@@ -3,10 +3,12 @@ import UserLogin from "./hotel/presentation/view/auth/user-login.vue";
 import UserRegister from "./hotel/presentation/view/auth/user-register.vue";
 import Home from "./shared/presentation/view/home.vue";
 import Navbar from "./shared/presentation/components/nabvar.vue";
+import Sidebar from "./shared/presentation/components/sidebar.vue";
 </script>
 
 <template>
   <Navbar />
+  <Sidebar />
 </template>
 
 
