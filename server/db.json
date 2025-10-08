@@ -33,7 +33,7 @@
       "internet": true,
       "air_conditioning": true,
       "breakfast_included": true,
-      "available": true,
+      "available": true
     },
     {
       "id": 2,
@@ -44,7 +44,7 @@
       "internet": true,
       "air_conditioning": false,
       "breakfast_included": false,
-      "available": true,
+      "available": true
     },
     {
       "id": 3,
@@ -55,7 +55,7 @@
       "internet": true,
       "air_conditioning": false,
       "breakfast_included": false,
-      "available": false,
+      "available": false
     }
   ],
 

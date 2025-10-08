@@ -1,6 +1,3 @@
-<script setup>
-
-</script>
 
 <template>
   <div class="login-container">
@@ -86,7 +83,7 @@
 
 .my-button {
   width: 100%;
-  border-radius: 15px; /* fuerza el borde redondeado */
+  border-radius: 15px;
 }
 
 </style>

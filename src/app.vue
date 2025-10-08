@@ -7,8 +7,7 @@ import Sidebar from "./shared/presentation/components/sidebar.vue";
 </script>
 
 <template>
-  <Navbar />
-  <Sidebar />
+  <router-view/>
 </template>
 
 

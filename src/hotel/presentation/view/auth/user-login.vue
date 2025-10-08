@@ -1,8 +1,6 @@
-<script setup>
-</script>
-
 <template>
-  <div class="login-container">
+  <h1>HOLa LOGIN</h1>
+<!--   <div class="login-container">
     <pv-card class="login-card p-4" >
       <template #title>
         <h2 class="text-center">Iniciar Sesión</h2>
@@ -39,7 +37,7 @@
         </form>
       </template>
     </pv-card>
-  </div>
+  </div> -->
 </template>
 
 <style scoped>

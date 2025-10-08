@@ -17,10 +17,12 @@ import {
     Password, SelectButton, Toast,
     ToastService, Toolbar
 } from "primevue";
-
+import { createPinia } from 'pinia';
+const pinia = createPinia();
 // noinspection JSCheckFunctionSignatures
 
 createApp(App)
+    .use(pinia)
     .use(PrimeVue, { theme: { preset: Material }, ripple: true})
     .use(ConfirmationService)
     .use(DialogService)

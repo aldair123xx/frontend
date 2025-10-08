@@ -3,7 +3,8 @@
 </script>
 
 <template>
-    <section id="home-view" class="page-view">
+    
+<!--     <section id="home-view" class="page-view">
         <h1 class="text-6xl font-bold text-white mb-4">
             Hotel Management + IoT: The Perfect Synergy
         </h1>
@@ -57,7 +58,7 @@
             <p class="text-gray-200">QA & Testing</p>
          </div>
         </div>
-    </section>
+    </section> -->
 </template>
 
 <style scoped>
