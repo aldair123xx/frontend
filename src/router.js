@@ -1,13 +1,15 @@
-import home from "./shared/presentation/view/home.vue";
 import { createRouter, createWebHistory } from 'vue-router';
 
-import login from './hotel/presentation/view/auth/user-login.vue';
-import register from './hotel/presentation/view/auth/user-register.vue';
+import RoomsView from "./views/RoomsView.vue";
+import LoginView from './views/LoginView.vue';
+import MybookingsView from './views/MybookingsView.vue';
+import AdminView from './views/adminView.vue';
 
 const routes = [
-  { path: '/',            name: 'home',           component: home, meta: { title: 'Home' } },
-  { path: '/login',           name: 'login',          component: login},
-  { path: '/register',        name: 'register',       component: register},
+  { path: '/', name: 'Cuartos', component: RoomsView },
+  { path: '/login', name: 'login', component: LoginView },
+  { path: '/my-bookings', name: 'Reservas', component: MybookingsView },
+  { path: '/admin', name: 'Admin', component: AdminView },
 ];
 
 

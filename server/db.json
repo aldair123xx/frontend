@@ -1,31 +1,37 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Administrador",
       "email": "admin@hotel.com",
       "password": "1234",
       "role": "admin"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Carlos Pérez",
       "email": "carlos@mail.com",
       "password": "1234",
       "role": "user"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "María López",
       "email": "maria@mail.com",
       "password": "1234",
       "role": "user"
+    },
+    {
+      "id": "d675",
+      "name": "luis alverto",
+      "email": "nuevo@gmail.com",
+      "password": "123456",
+      "role": "user"
     }
   ],
-
   "rooms": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Suite Deluxe",
       "description": "Habitación de lujo con cama king, vista al mar y baño privado.",
       "price": 250,
@@ -36,7 +42,7 @@
       "available": true
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Habitación Doble",
       "description": "Cómoda habitación con dos camas individuales y baño compartido.",
       "price": 150,
@@ -47,7 +53,7 @@
       "available": true
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Habitación Simple",
       "description": "Ideal para viajeros, cama individual, internet y TV.",
       "price": 90,
@@ -58,10 +64,9 @@
       "available": false
     }
   ],
-
   "bookings": [
     {
-      "id": 1,
+      "id": "1",
       "userId": 2,
       "roomId": 3,
       "check_in": "2025-10-10",
@@ -70,7 +75,7 @@
       "status": "confirmed"
     },
     {
-      "id": 2,
+      "id": "2",
       "userId": 3,
       "roomId": 2,
       "check_in": "2025-10-15",

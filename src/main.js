@@ -1,39 +1,19 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './app.vue'
-import PrimeVue from 'primevue/config';
-import Material from "@primeuix/themes/material";
-import 'primeicons/primeicons.css';
-import 'primeflex/primeflex.css'
-import router from "./router.js";
-
-import {
-    Button,
-    Card,
-    ConfirmationService,
-    DialogService,
-    FloatLabel,
-    InputText,
-    Password, SelectButton, Toast,
-    ToastService, Toolbar
-} from "primevue";
+import {createApp} from 'vue'
+import App from './App.vue'
 import { createPinia } from 'pinia';
-const pinia = createPinia();
-// noinspection JSCheckFunctionSignatures
+import router from './router';
+import { useAuthStore } from './stores/auth';
 
-createApp(App)
-    .use(pinia)
-    .use(PrimeVue, { theme: { preset: Material }, ripple: true})
-    .use(ConfirmationService)
-    .use(DialogService)
-    .use(ToastService)
-    .component('pv-input-text', InputText)
-    .component('pv-password', Password)
-    .component('pv-button', Button)
-    .component('pv-card', Card)
-    .component('pv-float-label', FloatLabel)
-    .component('pv-toast', Toast)
-    .component('pv-toolbar', Toolbar)
-    .component('pv-select-button', SelectButton)
-    .use(router)
-    .mount('#app')
+
+const app = createApp(App);
+const pinia = createPinia();
+
+app.use(pinia);
+app.use(router);
+
+const authStore = useAuthStore();
+
+authStore.initialize().then(()=>{
+    app.mount('#app');
+})
+
